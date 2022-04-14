@@ -1,0 +1,11 @@
+@import 'src/assets/styles/custom-style';
+
+
+.page-item.active .page-link {
+    background-color: map-get($colors, quintenary );
+    border-color: map-get($colors, quintenary );
+}
+
+.page-link {
+    color: map-get($colors , quintenary );
+}

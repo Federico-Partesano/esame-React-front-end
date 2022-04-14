@@ -1,0 +1,20 @@
+.my__container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 90vh;
+    overflow-y: auto;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+
+.card {
+    margin: 1rem;
+}
+
+.container__pagination {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}

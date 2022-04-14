@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import 'src/assets/styles/custom-style';
+
+::selection {
+    color: #fff;
+    background: map-get($colors , secondary );
+}
+
+.wrapper {
+    margin: 1rem;
+    height: 320px;
+    width: 260px;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transition: all ease-out 0.3s;
+    &:hover {
+        transform: translateY(-10px) scale(1.1);
+    }
+}
+
+.heart {
+    width: 40px !important;
+    height: 40px !important;
+    margin-right: 5px;
+    transition: opacity ease-in-out 0.5s;
+}
+
+.liked {
+    opacity: 1;
+}
+
+.not__liked{
+    opacity: 0;
+}
+
+.front__heart {
+    width: 30px !important;
+    height: 30px !important;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    transition: opacity ease-in-out 0.5s;
+
+}
+
+.wrapper .card {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    background: #fff;
+    border-radius: 10px;
+    transform: translateY(0deg);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.wrapper:hover>.front-face {
+    transform: rotateY(-180deg);
+}
+
+.wrapper .card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.wrapper .back-face {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    transform: rotateY(180deg);
+}
+
+.wrapper:hover>.back-face {
+    transform: rotateY(0deg);
+}
+
+.wrapper .back-face img {
+    height: 150px;
+    width: 150px;
+    padding: 5px;
+    border-radius: 50%;
+    background: linear-gradient(375deg, map-get($colors, quaternary), map-get($colors, quintenary));
+}
+
+.wrapper .back-face .info {
+    text-align: center;
+}
+
+.back-face .info .title {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.back-face ul {
+    display: flex;
+    padding-left: 0;
+}
+
+// .back-face ul div {
+//     display: block;
+//     height: 40px;
+//     width: 40px;
+//     color: #fff;
+//     text-align: center;
+//     margin: 0 5px;
+//     line-height: 38px;
+//     border: 2px solid transparent;
+//     border-radius: 50%;
+//     background: linear-gradient(375deg, map-get($colors, quaternary), map-get($colors, quintenary));
+//     transition: all 0.5s ease;
+// }
+
+.back-face ul a:hover {
+    color: map-get($colors, quaternary);
+    border-color: map-get($colors, quintenary);
+    background: linear-gradient(375deg, transparent, transparent);
+}

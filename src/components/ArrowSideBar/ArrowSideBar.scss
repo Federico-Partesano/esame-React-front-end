@@ -1,0 +1,44 @@
+.my__container__arrow {
+    position: fixed;
+    right: 0;
+    top: 50px;
+    background-color: #212529;
+    z-index: 100;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 5px;
+    transition: transform cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s,
+}
+
+.image__arrow {
+    animation: mymove 6s infinite;
+}
+@keyframes mymove {
+    from {transform: rotateY(45deg)}
+    25% {transform: rotateY(0deg)}
+    50% {transform: rotateY(45deg)}
+    75% {transform: rotateY(0deg)}
+    to {transform: rotateY(45deg)}
+  }
+
+.closed__sidebar {
+    transform: translateX(0px);
+}
+.opened__sidebar {
+
+      transform: translateX(14vw);
+
+    @media only screen and (max-width: 1280px) {
+        transform: translateX(14vw);
+
+    }
+    @media only screen and (max-width: 768px) {
+        transform: translateX(12vw);
+
+    }
+    @media only screen and (max-width: 568px) {
+        transform: translateX(7vw);
+
+    }
+
+}
